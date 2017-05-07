@@ -59,11 +59,11 @@ namespace WhiskeyJourney
             //   appId: "",
             //   appSecret: "");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = "891683275243-m121g2prt2mma2fpka2u4i9ac4njg03h.apps.googleusercontent.com",
+                ClientSecret = "oQnoj7HVAmIEKaQ2pDU1hZ3x"
+            });
         }
     }
 }

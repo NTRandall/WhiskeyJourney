@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace WhiskeyJourney.Controllers
 {
+    [RequireHttps]
     public class HomeController : Controller
     {
         public ActionResult Index()
