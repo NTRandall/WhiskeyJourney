@@ -236,6 +236,13 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="smartlogin\css\style.css" />
+    <Content Include="smartlogin\images\arrow.png" />
+    <Content Include="smartlogin\images\bg3.jpg" />
+    <Content Include="smartlogin\images\mail.png" />
+    <Content Include="smartlogin\images\pass.png" />
+    <Content Include="smartlogin\index.html" />
+    <Content Include="smartlogin\w3layouts-License.txt" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -276,6 +283,8 @@
     <Content Include="Views\Admin\Create.cshtml" />
     <Content Include="Views\Admin\EditUser.cshtml" />
     <Content Include="Views\Admin\EditRoles.cshtml" />
+    <Content Include="Views\Account\SmartLogin.cshtml" />
+    <Content Include="Views\Account\SmartRegister.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
