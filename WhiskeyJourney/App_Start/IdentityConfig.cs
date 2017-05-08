@@ -23,7 +23,7 @@ namespace WhiskeyJourney
         public Task SendAsync(IdentityMessage message)
         {
             // Plug in your email service here to send an email.
-            //return Task.FromResult(0);
+           // return Task.FromResult(0);
             return Task.Factory.StartNew(() =>
             {
                 sendMail(message);
@@ -53,6 +53,8 @@ namespace WhiskeyJourney
             smtpClient.Send(msg);
         }
     }
+
+
 
     public class SmsService : IIdentityMessageService
     {
