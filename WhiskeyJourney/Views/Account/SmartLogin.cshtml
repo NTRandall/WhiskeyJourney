@@ -51,14 +51,19 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             @Html.PasswordFor(m => m.Password, new {@class = "form-control", @placeholder = "Password"})
             @Html.ValidationMessageFor(m => m.Password, "", new {@class = "text-danger"})
         </div>
-        <h6><a href="#">Forgot Password?</a></h6>
-        <div class="clear"></div>
+        <h6>@Html.ActionLink("Forgot your password?", "ForgotPassword")</h6>
         <span>@Html.CheckBoxFor(m => m.RememberMe)Remember Me</span>
+        <div class="clear"></div>
+       
         <input type="submit" value="login" name="login">
     }
-    
-
+         <p>-OR-</p>
+         <section id="socialLoginForm">
+             @Html.Partial("_ExternalLoginsListPartial", new ExternalLoginListViewModel { ReturnUrl = ViewBag.ReturnUrl })
+         </section>             
+         <br/>
          <p>Don't Have an Account ?</p>
+         <br/>
          <p>
              @Html.ActionLink("Begin your Journey Here.", "Register")
          </p>
