@@ -21,11 +21,19 @@ namespace WhiskeyJourney
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js",
+                      
                       "~/Scripts/respond.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      "~/Content/css/bootstrap.css",
+                      "~/Content/css/essentials.css",
+                      "~/Content/css/animate.css",
+                      "~/Content/css/layout.css",
+                      "~/Content/css/layout-dark.css",
+                      "~/Content/css/layout-responsive.css",
+                      "~/Content/css/shop.css",
+                      "~/Content/css/color_scheme/darkblue.css",
+                      "~/Content/css/site.css"));
         }
     }
 }

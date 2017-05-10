@@ -3,48 +3,102 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - Whisk(e)y Journey</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800" rel="stylesheet" type="text/css" />
+    <!-- CORE CSS -->
+    <link href="~/Scripts/plugins/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet" />href="" rel="stylesheet" type="text/css" />
+    <link href="~/Content/css/font-awesome.css" rel="stylesheet" />assets/css/font-awesome.css" rel="stylesheet" type="text/css" />
+    <link href="~/Scripts/plugins/owl-carousel/owl.carousel.css" rel="stylesheet" type="text/css"/>
+    <link href="~/Scripts/plugins/owl-carousel/owl.theme.css" rel="stylesheet" type="text/css" />
+    <link href="~/Scripts/plugins/owl-carousel/owl.transitions.css" rel="stylesheet" type="text/css"/>
+    <link href="~/Scripts/plugins/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css"/>
+    <link href="~/Content/css/animate.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/css/superslides.css" rel="stylesheet" type="text/css"/>
+   
+    <!-- REVOLUTION SLIDER -->
 
+    <link href="~/Scripts/plugins/slider.revolution.v4/css/settings.css" rel="stylesheet" type="text/css"/>
+    <!-- THEME CSS -->
+    <link href="~/Content/css/essentials.css" rel="stylesheet" type="text/css"/>
+    <link href="~/Content/css/layout.css" rel="stylesheet" type="text/css"/>
+    <link href="~/Content/css/layout-responsive.css" rel="stylesheet" type="text/css"/>
+    <link href="~/Content/css/shop.css" rel="stylesheet" type="text/css"/>
+    <link href="~/Content/css/color_scheme/orange.css" rel="stylesheet" type="text/css"/>
+    /><!-- orange: default style -->
+    <link href="~/Content/css/layout-dark.css" rel="stylesheet" type="text/css"/>
+    <!--<link id="css_dark_skin" href="assets/css/layout-dark.css" rel="stylesheet" type="text/css" />--><!-- DARK SKIN -->
+    <!-- Morenizr -->
+    @*<script type="text/javascript" src="assets/plugins/modernizr.min.js"></script>*@
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header page-scroll">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Whisk(e)y Journey", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Product", "Index", "Product")</li>
-                    <li>@Html.ActionLink("Cart", "Index", "Cart")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                     @if (User.IsInRole("Administrator"))
                     {
                         <li>@Html.ActionLink("Administration", "Index", "Admin")</li>
                         <li>@Html.ActionLink("Customer", "Index", "Customer")</li>
+                        <li>@Html.ActionLink("Product", "Index", "Product")</li>
                     }
 
+                    <li>@Html.ActionLink("Cart", "Index", "Cart")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
         </div>
-    </div>
-    <div class="container body-content">
+    </nav>
+
         @RenderBody()
         <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
+<footer>
+    <div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <ul class="list-inline text-center">
+                <li>
+                    <a href="#">
+                        <span clas="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"> </i>
+                            <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span clas="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"> </i>
+                            <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span clas="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"> </i>
+                            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+            <p>&copy; @DateTime.Now.Year - A Whisk(e)y Journey</p>
+        </div>
     </div>
-
+        </div>
+</footer>
+ 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
