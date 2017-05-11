@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace WhiskeyJourney.Controllers
 {
+    [Authorize]
     [RequireHttps]
     public class HomeController : Controller
     {
